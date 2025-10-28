@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>File Processor AI - Upload</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 24px; }
+    .progress { width: 100%; background: #eee; height: 18px; border-radius: 3px; overflow: hidden; margin-top: 8px; }
+    .bar { height: 100%; background: #4caf50; width: 0%; transition: width .2s; }
+  </style>
+</head>
+<body>
+  <h1>File Processor AI — Chunked Upload</h1>
+  <form id="upload-form">
+    <label>Project: <input id="project" name="project" value="default" /></label><br/><br/>
+    <input id="file" type="file" name="file" /><br/><br/>
+    <label>Chunk size (bytes): <input id="chunk-size" type="number" value="262144" /></label><br/><br/>
+    <button type="submit">Upload</button>
+  </form>
+  <div id="status"></div>
+  <div class="progress" style="display:none"><div class="bar" id="bar"></div></div>
+
+  <script src="upload.js"></script>
+</body>
+</html>
